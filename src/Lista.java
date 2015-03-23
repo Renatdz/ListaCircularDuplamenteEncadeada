@@ -6,7 +6,7 @@ public class Lista {
 	//methods
 	
 	/**
-	 * Add, adiciona um novo dado/informa‹o no inicio da lista.
+	 * Add, adiciona um novo dado/informaï¿½ï¿½o no inicio da lista.
 	 * @param int n
 	 */
 	void add(int n){
@@ -24,7 +24,7 @@ public class Lista {
 	}
 		
 	/**
-	 * remove, remove um dado/informa‹o da lista, caso exista. Caso contr‡rio, nada ocorre.
+	 * remove, remove um dado/informaï¿½ï¿½o da lista, caso exista. Caso contrï¿½rio, nada ocorre.
 	 * @param int n
 	 */
 	void remove(int n){
@@ -43,6 +43,28 @@ public class Lista {
 			
 			p = null;
 		}		
+	}
+	
+	/**
+	 * Procura um certo numero na lista, retorna uma frase se encontrado.
+	 * @param int n
+	 */
+	String buscar(int n){
+		No aux, p;
+		p = getInit();
+		aux = null;
+	
+		do{
+			aux = p;
+			p = p.getProx();
+
+		}while(p != null && p.getDado() != n);
+			
+		if(p.getDado() == n){
+			return "existe na lista";
+		}else{
+			return "nÃ£o existe na lista";
+		}
 	}
 	
 	/**
